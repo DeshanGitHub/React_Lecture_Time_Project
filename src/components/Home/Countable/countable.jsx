@@ -1,18 +1,30 @@
-import React from "react";
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
+import React, { useState } from "react";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
 
-const countable = () => {
+const Countable = () => {
+  const [count, setCount] = useState(0);
+
+  const increment = () => {
+    setCount(count + 1);
+  };
+
   return (
     <div>
       <Typography variant="h4" gutterBottom>
-        Count : 0
+        Count : {count}
       </Typography>
-      <Button variant="contained" onClick={()=>{
-        console.log("Button Clicked!!");
-      }}>Increase</Button>
+      <Button
+        variant="contained"
+        onClick={() => {
+          console.log("Button Clicked!!");
+          increment();
+        }}
+      >
+        Increase
+      </Button>
     </div>
   );
 };
 
-export default countable;
+export default Countable;
