@@ -3,7 +3,7 @@ import HomePage from "../pages/Home/home";
 
 function App() {
   return (
-    <HomePage/>
+    <HomePage name="Kavindu" status="busy"/>
   );
 }
 

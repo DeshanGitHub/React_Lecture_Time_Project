@@ -8,7 +8,7 @@ class HomePage extends Component{
     render(){
         return(
             <div>
-                <h1>Hello Im kavindu</h1>
+                <h1>Hello Im {this.props.name} and my status is {this.props.status}</h1>
             </div>
         )
     }
