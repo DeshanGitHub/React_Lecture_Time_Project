@@ -1,16 +1,20 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
+import { withStyles } from "@mui/styles";
+import { styleSheet } from "./style";
 
-export const Greeting = (props) => {
+const Greeting = (props) => {
+  const { classes } = props;
+
   const obj = {
     profileImage: "https://picsum.photos/400/300",
   };
 
   return (
-    <div>
+    <div className={classes.container}>
       <div>
         <Typography variant="h3" gutterBottom>
-          His Institute is {props.instituteName}
+          {props.instituteName}
         </Typography>
       </div>
       <div>
@@ -19,3 +23,5 @@ export const Greeting = (props) => {
     </div>
   );
 };
+
+export default withStyles(styleSheet)(Greeting);
