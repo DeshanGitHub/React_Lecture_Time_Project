@@ -5,6 +5,10 @@ import Button from "@mui/material/Button";
 const Countable = () => {
   const [count, setCount] = useState(0);
 
+  const decrement = () => {
+    setCount(count - 1);
+  };
+
   const increment = () => {
     setCount(count + 1);
   };
@@ -22,6 +26,16 @@ const Countable = () => {
         }}
       >
         Increase
+      </Button>
+
+      <Button
+        variant="outlined"
+        color="error"
+        onClick={() => {
+          decrement();
+        }}
+      >
+        Decrease
       </Button>
     </div>
   );
