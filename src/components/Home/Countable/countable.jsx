@@ -24,6 +24,7 @@ const Countable = () => {
           console.log("Button Clicked!!");
           increment();
         }}
+        
       >
         Increase
       </Button>
@@ -34,6 +35,7 @@ const Countable = () => {
         onClick={() => {
           decrement();
         }}
+        style={{marginLeft:'15px'}}
       >
         Decrease
       </Button>
